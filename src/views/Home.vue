@@ -10,15 +10,17 @@
       achieve this, I graduated from Le Wagon bootcamp, and here I am! 🚀
     </p>
     <Technologies />
+    <ButtonToTop />
   </div>
 </template>
 
 <script>
 import Technologies from "../components/Technologies.vue";
+import ButtonToTop from "../components/ButtonToTop.vue";
 
 export default {
   name: "Home",
-  components: { Technologies },
+  components: { Technologies, ButtonToTop },
 };
 </script>
 

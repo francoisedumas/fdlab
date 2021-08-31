@@ -30,10 +30,20 @@
       <iframe src="https://www.fiatope.com/" title="Fiatope"></iframe>
     </div>
   </div>
+  <ButtonToTop />
 </template>
 
+<script>
+import ButtonToTop from "../components/ButtonToTop.vue";
+
+export default {
+  name: "Home",
+  components: { ButtonToTop },
+};
+</script>
+
 <style>
-.videosBox { 
+.videosBox {
   display: flex;
   flex-direction: column;
   align-items: center;
