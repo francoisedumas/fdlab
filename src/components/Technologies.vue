@@ -44,24 +44,24 @@
   animation-direction: alternate;
 }
 .html {
-  background-color: rgb(222, 75, 37);
+  background-color: rgb(224, 184, 172);
 }
 .css {
-  background-color: rgb(21, 111, 179);
+  background-color: rgb(227, 132, 49);
   animation-delay: 1s;
 }
 .js {
-  background-color: rgb(241, 218, 30);
+  background-color: rgb(224, 184, 172);
 }
 .vue {
-  background-color: rgb(63, 178, 126);
+  background-color: rgb(227, 132, 49);
 }
 .ror {
-  background-color: rgb(198, 1, 1);
+  background-color: rgb(224, 184, 172);
   animation-delay: 1s;
 }
 .sql {
-  background-color: rgb(49, 96, 145);
+  background-color: rgb(227, 132, 49);
 }
 @keyframes animateText {
   from {

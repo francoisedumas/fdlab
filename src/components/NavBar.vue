@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>FDL</h1>
+    <router-link :to="{ name: 'Home' }"><h1>FDL</h1></router-link>
     <nav>
       <router-link :to="{ name: 'Home' }">Home</router-link>
       <router-link :to="{ name: 'Projects' }">Projects</router-link>
