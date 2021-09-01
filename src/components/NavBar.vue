@@ -4,6 +4,7 @@
     <nav>
       <router-link :to="{ name: 'Home' }">Home</router-link>
       <router-link :to="{ name: 'Projects' }">Projects</router-link>
+      <router-link :to="{ name: 'Til' }">TIL</router-link>
     </nav>
   </header>
 </template>
