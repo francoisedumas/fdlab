@@ -1,7 +1,9 @@
 <template>
   <div class="tag-cloud">
     <h3>Tags</h3>
-    <div v-for="tag in tags" :key="tag">#{{ tag }}</div>
+    <div v-for="tag in tags" :key="tag">
+      <div @click="$emit('filterTils', tag)">#{{ tag }}</div>
+    </div>
   </div>
 </template>
 
@@ -12,6 +14,10 @@ export default {
   props: ["tils"],
   setup(props) {
     const { tags } = useTags(props.tils);
+    // const filterTag = (tag) => {
+    //   console.log(tag);
+    //   context.emit("filterTils", tag);
+    // };
     return { tags };
   },
 };

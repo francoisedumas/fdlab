@@ -2,7 +2,7 @@
   <div class="home">
     <h1>Today I learned (TIL)</h1>
     <div class="layout">
-      <TagCloud :tils="tils" />
+      <TagCloud :tils="tils" @filterTils="filterTils" />
       <PostList :tils="tils" />
     </div>
   </div>
@@ -26,7 +26,7 @@ export default {
         {
           title: "Symbol#to_proc conversion",
           description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-          tags: ["ruby"],
+          tags: ["lorem"],
         },
         {
           title: "Symbol#to_proc conversion",
@@ -35,6 +35,12 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    filterTils(tag) {
+      console.log(tag)
+      return this.tils.filter((til) => til.tag === tag);
+    },
   },
 };
 </script>
