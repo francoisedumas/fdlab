@@ -2,7 +2,7 @@
   <div class="home">
     <h1>Today I learned (TIL)</h1>
     <div class="layout">
-      <TagCloud :tils="tils" @filterTils="filterTils" />
+      <TagCloud :tils="tils" @tag="filterTils" />
       <PostList :tils="tils" />
     </div>
   </div>
@@ -11,37 +11,65 @@
 <script>
 import PostList from "../components/PostList.vue";
 import TagCloud from "../components/TagCloud.vue";
+import { ref } from "vue";
+import { computed } from "vue";
 
 export default {
   name: "Til",
   components: { PostList, TagCloud },
-  data() {
-    return {
-      tils: [
-        {
-          title: "Symbol#to_proc conversion",
-          description: "map(&:to_i) is exactly the same as map { |x| x.to_i }",
-          tags: ["ruby"],
-        },
-        {
-          title: "Symbol#to_proc conversion",
-          description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-          tags: ["lorem"],
-        },
-        {
-          title: "Symbol#to_proc conversion",
-          description: "map(&:to_i) is exactly the same as map { |x| x.to_i }",
-          tags: ["ruby"],
-        },
-      ],
-    };
+  setup() {
+    const tils = ref([
+      {
+        title: "Symbol#to_proc conversion",
+        description: "map(&:to_i) is exactly the same as map { |x| x.to_i }",
+        tags: ["ruby"],
+      },
+      {
+        title: "Symbol#to_proc conversion",
+        description:
+          "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+        tags: ["lorem"],
+      },
+      {
+        title: "Symbol#to_proc conversion",
+        description: "map(&:to_i) is exactly the same as map { |x| x.to_i }",
+        tags: ["ruby"],
+      },
+    ]);
+
+    const filterTils = computed((tag) => {
+      return tils.value.filter((til) => til.tag === tag);
+    });
+
+    return { tils, filterTils };
   },
-  computed: {
-    filterTils(tag) {
-      console.log(tag)
-      return this.tils.filter((til) => til.tag === tag);
-    },
-  },
+  // data() {
+  //   return {
+  //     tils: [
+  //       {
+  //         title: "Symbol#to_proc conversion",
+  //         description: "map(&:to_i) is exactly the same as map { |x| x.to_i }",
+  //         tags: ["ruby"],
+  //       },
+  //       {
+  //         title: "Symbol#to_proc conversion",
+  //         description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+  //         tags: ["lorem"],
+  //       },
+  //       {
+  //         title: "Symbol#to_proc conversion",
+  //         description: "map(&:to_i) is exactly the same as map { |x| x.to_i }",
+  //         tags: ["ruby"],
+  //       },
+  //     ],
+  //   };
+  // },
+  // computed: {
+  //   filterTils(tag) {
+  //     console.log(tag)
+  //     return this.tils.filter((til) => til.tag === tag);
+  //   },
+  // },
 };
 </script>
 

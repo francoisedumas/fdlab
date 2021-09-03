@@ -2,7 +2,7 @@
   <div class="tag-cloud">
     <h3>Tags</h3>
     <div v-for="tag in tags" :key="tag">
-      <div @click="$emit('filterTils', tag)">#{{ tag }}</div>
+      <div @click="filterTag(tag)" class="uniq-tag">#{{ tag }}</div>
     </div>
   </div>
 </template>
@@ -12,13 +12,13 @@ import useTags from "../composables/useTags";
 
 export default {
   props: ["tils"],
-  setup(props) {
+  setup(props, context) {
     const { tags } = useTags(props.tils);
-    // const filterTag = (tag) => {
-    //   console.log(tag);
-    //   context.emit("filterTils", tag);
-    // };
-    return { tags };
+    const filterTag = (tag) => {
+      console.log(tag);
+      context.emit("tag", tag);
+    };
+    return { tags, filterTag };
   },
 };
 </script>
@@ -36,12 +36,13 @@ export default {
   display: inline-block;
   padding: 10px;
 }
-.tag-cloud a {
+.tag-cloud .uniq-tag {
   color: #ccc;
   text-decoration: none;
 }
-.tag-cloud a.router-link-active {
+.tag-cloud .uniq-tag:hover {
   color: #ff8800;
   font-weight: bold;
+  cursor: pointer;
 }
 </style>
