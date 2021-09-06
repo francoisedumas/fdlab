@@ -11,8 +11,7 @@
 <script>
 import PostList from "../components/PostList.vue";
 import TagCloud from "../components/TagCloud.vue";
-import { ref } from "vue";
-import { computed } from "vue";
+import { ref, computed } from "vue";
 
 export default {
   name: "Til",
@@ -36,40 +35,14 @@ export default {
         tags: ["ruby"],
       },
     ]);
-
     const filterTils = computed((tag) => {
+      console.log(tag)
       return tils.value.filter((til) => til.tag === tag);
     });
 
+    console.log(filterTils.value)
     return { tils, filterTils };
   },
-  // data() {
-  //   return {
-  //     tils: [
-  //       {
-  //         title: "Symbol#to_proc conversion",
-  //         description: "map(&:to_i) is exactly the same as map { |x| x.to_i }",
-  //         tags: ["ruby"],
-  //       },
-  //       {
-  //         title: "Symbol#to_proc conversion",
-  //         description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-  //         tags: ["lorem"],
-  //       },
-  //       {
-  //         title: "Symbol#to_proc conversion",
-  //         description: "map(&:to_i) is exactly the same as map { |x| x.to_i }",
-  //         tags: ["ruby"],
-  //       },
-  //     ],
-  //   };
-  // },
-  // computed: {
-  //   filterTils(tag) {
-  //     console.log(tag)
-  //     return this.tils.filter((til) => til.tag === tag);
-  //   },
-  // },
 };
 </script>
 
