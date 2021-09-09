@@ -2,8 +2,8 @@
   <div class="home">
     <h1>Today I learned (TIL)</h1>
     <div class="layout">
-      <TagCloud :tils="tils" @tag="filterTils" />
-      <PostList :tils="tils" />
+      <TagCloud :tils="tils" @tag="onTag" />
+      <PostList :tils="filterTils" />
     </div>
   </div>
 </template>
@@ -17,6 +17,7 @@ export default {
   name: "Til",
   components: { PostList, TagCloud },
   setup() {
+    const currentTag = ref();
     const tils = ref([
       {
         title: "Symbol#to_proc conversion",
@@ -35,13 +36,21 @@ export default {
         tags: ["ruby"],
       },
     ]);
-    const filterTils = computed((tag) => {
-      console.log(tag)
-      return tils.value.filter((til) => til.tag === tag);
+
+    const filterTils = computed(() => {
+      // if (onTag.value) {
+      //   return tils.value.filter((til) => til.tags.includes(currentTag.value));
+      // } else {
+      //   return tils.value;
+      // }
+      return tils.value.filter((til) => til.tags.includes(currentTag.value));
     });
 
-    console.log(filterTils.value)
-    return { tils, filterTils };
+    const onTag = (tag) => (currentTag.value = tag);
+
+    console.log(onTag.value);
+
+    return { tils, filterTils, onTag };
   },
 };
 </script>

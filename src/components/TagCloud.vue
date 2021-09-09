@@ -15,7 +15,6 @@ export default {
   setup(props, context) {
     const { tags } = useTags(props.tils);
     const filterTag = (tag) => {
-      console.log(tag);
       context.emit("tag", tag);
     };
     return { tags, filterTag };
