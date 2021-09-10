@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1>Today I learned (TIL)</h1>
+    <button @click="currentTag = ''">Clear filter</button>
     <div class="layout">
       <TagCloud :tils="tils" @tag="onTag" />
       <PostList :tils="filterTils" />
@@ -38,19 +39,14 @@ export default {
     ]);
 
     const filterTils = computed(() => {
-      // if (onTag.value) {
-      //   return tils.value.filter((til) => til.tags.includes(currentTag.value));
-      // } else {
-      //   return tils.value;
-      // }
-      return tils.value.filter((til) => til.tags.includes(currentTag.value));
+      return currentTag.value
+        ? tils.value.filter((til) => til.tags.includes(currentTag.value))
+        : tils.value;
     });
 
     const onTag = (tag) => (currentTag.value = tag);
 
-    console.log(onTag.value);
-
-    return { tils, filterTils, onTag };
+    return { tils, filterTils, onTag, currentTag };
   },
 };
 </script>
