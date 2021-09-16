@@ -22,19 +22,20 @@ export default {
     const tils = ref([
       {
         title: "Symbol#to_proc conversion",
-        description: "map(&:to_i) is exactly the same as map { |x| x.to_i }",
-        tags: ["ruby"],
-      },
-      {
-        title: "Symbol#to_proc conversion",
         description:
-          "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-        tags: ["lorem"],
+          "**map(&:to_i)** is exactly the same as **map { |x| x.to_i }**",
+        tags: ["Ruby"],
+      },
+      {
+        title: "Be time zone aware!",
+        description:
+          "Use **Date.current** and **Time.current** instead of **Date.today** and **Time.now**. The time given will be time zone based",
+        tags: ["Ruby", "Time zone"],
       },
       {
         title: "Symbol#to_proc conversion",
         description: "map(&:to_i) is exactly the same as map { |x| x.to_i }",
-        tags: ["ruby"],
+        tags: ["Ruby"],
       },
     ]);
 

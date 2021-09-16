@@ -3,7 +3,7 @@
     <div v-for="til in tils" :key="til">
       <div class="til">
         <h3>{{ til.title }}</h3>
-        <p>{{ til.description }}</p>
+        <div v-html="markdownToHtml(til.description)"></div>
         <span v-for="tag in til.tags" :key="tag"> #{{ tag }} </span>
       </div>
     </div>
@@ -11,8 +11,15 @@
 </template>
 
 <script>
+import marked from "marked";
+
 export default {
   props: ["tils"],
+  methods: {
+    markdownToHtml(description) {
+      return marked(description);
+    },
+  },
 };
 </script>
 
