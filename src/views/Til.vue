@@ -33,9 +33,10 @@ export default {
         tags: ["Ruby", "Time zone"],
       },
       {
-        title: "Symbol#to_proc conversion",
-        description: "map(&:to_i) is exactly the same as map { |x| x.to_i }",
-        tags: ["Ruby"],
+        title: "each and find_each",
+        description:
+          "When you call **#each**, all records will be loaded into memory. When you call **#find_each**, records will be loaded into memory in batches of the given batch size. So when your query returns a number of records that would be too much memory for the server's available resources, then using **#find_each** would be a great choice.",
+        tags: ["Ruby", "Active Record"],
       },
     ]);
 
