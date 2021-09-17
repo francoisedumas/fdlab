@@ -4,7 +4,9 @@
       <div class="til">
         <h3>{{ til.title }}</h3>
         <div v-html="markdownToHtml(til.description)"></div>
-        <span v-for="tag in til.tags" :key="tag"> #{{ tag }} </span>
+        <span v-for="tag in til.tags" :key="tag" class="emphasis">
+          #{{ tag }}
+        </span>
       </div>
     </div>
   </div>
@@ -48,5 +50,9 @@ export default {
   padding-right: 40px;
   /* left: -30px; */
   transform: rotateZ(-1deg);
+}
+.emphasis {
+  padding: 2px;
+  font-style: italic;
 }
 </style>
