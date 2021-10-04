@@ -1,7 +1,8 @@
 <template>
   <div class="contact">
     <h1>Contact Me</h1>
-    <form @submit.prevent="submit" @reset="onReset">
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" />
       <div>
         <label>Name</label>
         <input v-model="name" />
