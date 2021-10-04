@@ -1,7 +1,12 @@
 <template>
   <div class="contact">
     <h1>Contact Me</h1>
-    <form name="contact" method="POST" data-netlify="true">
+    <form
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
       <input type="hidden" name="form-name" value="contact" />
       <div>
         <label>Name</label>
@@ -19,8 +24,7 @@
       </div>
 
       <div>
-        <button type="submit">submit</button>
-        <button type="reset">reset</button>
+        <button type="submit">Send</button>
       </div>
     </form>
   </div>
