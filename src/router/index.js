@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Projects from "../views/Projects.vue";
 import Til from "../views/Til.vue";
+import Contact from "../views/Contact.vue";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: "/til",
     name: "Til",
     component: Til,
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
   },
 ];
 
