@@ -1,28 +1,50 @@
 <template>
   <div class="contact">
     <h1>Contact Me</h1>
-    <form name="ask-question" netlify netlify-honeypot="bot-field">
+    <form
+      name="contact"
+      id="myForm"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="contact" />
       <div>
-        <label>Your Name: </label>
-        <input type="text" name="name" />
+        <label>Name</label>
+        <input v-model="name" />
       </div>
+
       <div>
-        <label>Your Email: </label>
-        <input type="email" name="email" />
+        <label>Email</label>
+        <input v-model="email" />
       </div>
+
       <div>
-        <label>Message: </label>
-        <textarea name="message"></textarea>
+        <label>Message</label>
+        <textarea v-model="message"></textarea>
       </div>
+
       <div>
         <button type="submit">Send</button>
       </div>
     </form>
   </div>
 </template>
+
 <script>
-export default {};
+import { ref } from "vue";
+
+export default {
+  setup() {
+    const name = ref("");
+    const email = ref("");
+    const message = ref("");
+
+    return { name, email, message };
+  },
+};
 </script>
+
 <style>
 .contact {
   padding: 15px 30px;
