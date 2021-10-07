@@ -2,25 +2,25 @@
   <div class="contact">
     <h1>Contact Me</h1>
     <form
-      name="contact"
-      id="myForm"
+      name="contactForm"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      enctype="application/x-www-form-urlencoded"
     >
       <div>
         <label>Name</label>
-        <input v-model="name" />
+        <input v-model="name" name="name" />
       </div>
 
       <div>
         <label>Email</label>
-        <input v-model="email" />
+        <input v-model="email" name="email" />
       </div>
 
       <div>
         <label>Message</label>
-        <textarea v-model="message"></textarea>
+        <textarea v-model="message" name="message"></textarea>
       </div>
 
       <div>
