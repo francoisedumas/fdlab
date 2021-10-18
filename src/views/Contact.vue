@@ -6,7 +6,6 @@
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      enctype="application/x-www-form-urlencoded"
     >
       <div>
         <label>Name</label>
