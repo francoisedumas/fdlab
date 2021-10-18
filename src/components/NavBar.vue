@@ -6,6 +6,7 @@
       <router-link :to="{ name: 'Projects' }">Projects</router-link>
       <router-link :to="{ name: 'Til' }">TIL</router-link>
       <router-link :to="{ name: 'Contact' }">Contact</router-link>
+      <router-link :to="{ name: 'Thanks' }">Thanks</router-link>
     </nav>
   </header>
 </template>
