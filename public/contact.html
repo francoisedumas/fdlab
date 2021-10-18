@@ -13,9 +13,24 @@
   </head>
   <body>
     <form name="contactForm" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="radio" name="panelist" />
-      <textarea name="question"></textarea>
+      <div>
+        <label>Name</label>
+        <input name="name" />
+      </div>
+
+      <div>
+        <label>Email</label>
+        <input name="email" />
+      </div>
+
+      <div>
+        <label>Message</label>
+        <textarea name="message"></textarea>
+      </div>
+
+      <div>
+        <button type="submit">Send</button>
+      </div>
     </form>
   </body>
 </html>
