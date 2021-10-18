@@ -6,7 +6,7 @@
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      @submit.prevent="handleFormSubmit"
+      action="/thanks"
     >
       <input type="hidden" name="form-name" value="contactForm" />
       <div>
@@ -40,24 +40,7 @@ export default {
     const email = ref("");
     const message = ref("");
 
-    const handleFormSubmit = async ($event) => {
-      const form = $event.target;
-      console.log(form);
-      const body = new URLSearchParams(new FormData(form));
-      try {
-        const res = await fetch(form.action, { method: "POST", body });
-        if (res.ok) {
-          this.$router.push({ name: "thanks" });
-        } else {
-          throw res;
-        }
-      } catch (err) {
-        console.error(err);
-        // you don't have an error page but maybe you should add one
-      }
-    };
-
-    return { name, email, message, handleFormSubmit };
+    return { name, email, message };
   },
 };
 </script>
