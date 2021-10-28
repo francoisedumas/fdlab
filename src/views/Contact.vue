@@ -29,9 +29,11 @@
 export default {
   data() {
     return {
-      name: "",
-      email: "",
-      message: "",
+      form: {
+        name: "",
+        email: "",
+        message: "",
+      },
     };
   },
   methods: {
