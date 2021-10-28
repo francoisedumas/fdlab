@@ -1,23 +1,16 @@
 <template>
   <div class="contact">
     <h1>Contact Me</h1>
-    <form
-      name="contactForm"
-      method="post"
-      @submit.prevent="handleSubmit"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      action="/thanks"
-    >
-      <input type="hidden" name="form-name" value="contactForm" />
+    <form method="post" @submit.prevent="handleSubmit">
+      <input type="hidden" name="form-name" value="ask-question" />
       <div>
         <label>Name</label>
-        <input v-model="name" name="name" />
+        <input v-model="name" type="text" name="name" />
       </div>
 
       <div>
         <label>Email</label>
-        <input v-model="email" name="email" />
+        <input v-model="email" type="text" name="email" />
       </div>
 
       <div>
@@ -54,7 +47,7 @@ export default {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
-          "form-name": "contactForm",
+          "form-name": "ask-question",
           ...this.form,
         }),
       })
