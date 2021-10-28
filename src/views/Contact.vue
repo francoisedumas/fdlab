@@ -33,9 +33,6 @@
 </template>
 
 <script>
-// import { ref } from "vue";
-// import { useRouter } from "vue-router";
-
 export default {
   data() {
     return {
@@ -57,7 +54,7 @@ export default {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
-          "form-name": "ask-question",
+          "form-name": "contactForm",
           ...this.form,
         }),
       })
@@ -69,40 +66,6 @@ export default {
         });
     },
   },
-  // setup() {
-  //   const router = useRouter();
-  //   const name = ref("");
-  //   const email = ref("");
-  //   const message = ref("");
-
-  //   const encode = (data) => {
-  //     return Object.keys(data)
-  //       .map(
-  //         (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-  //       )
-  //       .join("&");
-  //   };
-
-  //   const handleSubmit = () => {
-  //     console.log("I am here");
-  //     fetch("/contact", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //       body: encode({
-  //         "form-name": "contactForm",
-  //         ...this.form,
-  //       }),
-  //     })
-  //       .then(() => {
-  //         router.push({ name: "Thanks" });
-  //       })
-  //       .catch(() => {
-  //         router.push({ name: "404" });
-  //       });
-  //   };
-
-  //   return { name, email, message, handleSubmit };
-  // },
 };
 </script>
 
