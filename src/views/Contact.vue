@@ -4,6 +4,7 @@
     <form
       name="contactForm"
       method="post"
+      @submit.prevent="handleSubmit"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       action="/thanks"
@@ -32,16 +33,76 @@
 </template>
 
 <script>
-import { ref } from "vue";
+// import { ref } from "vue";
+// import { useRouter } from "vue-router";
 
 export default {
-  setup() {
-    const name = ref("");
-    const email = ref("");
-    const message = ref("");
-
-    return { name, email, message };
+  data() {
+    return {
+      name: "",
+      email: "",
+      message: "",
+    };
   },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+    handleSubmit() {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
+          "form-name": "ask-question",
+          ...this.form,
+        }),
+      })
+        .then(() => {
+          this.$router.push("thanks");
+        })
+        .catch(() => {
+          this.$router.push("404");
+        });
+    },
+  },
+  // setup() {
+  //   const router = useRouter();
+  //   const name = ref("");
+  //   const email = ref("");
+  //   const message = ref("");
+
+  //   const encode = (data) => {
+  //     return Object.keys(data)
+  //       .map(
+  //         (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+  //       )
+  //       .join("&");
+  //   };
+
+  //   const handleSubmit = () => {
+  //     console.log("I am here");
+  //     fetch("/contact", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //       body: encode({
+  //         "form-name": "contactForm",
+  //         ...this.form,
+  //       }),
+  //     })
+  //       .then(() => {
+  //         router.push({ name: "Thanks" });
+  //       })
+  //       .catch(() => {
+  //         router.push({ name: "404" });
+  //       });
+  //   };
+
+  //   return { name, email, message, handleSubmit };
+  // },
 };
 </script>
 

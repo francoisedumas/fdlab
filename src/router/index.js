@@ -3,7 +3,9 @@ import Home from "../views/Home.vue";
 import Projects from "../views/Projects.vue";
 import Til from "../views/Til.vue";
 import Contact from "../views/Contact.vue";
-import Thanks from "../views/Thanks.vue";
+// import Thanks from "../views/Thanks.vue";
+import SubmissionFail from "../components/SubmissionFail.vue";
+import SubmissionSuccess from "../components/SubmissionSuccess.vue";
 
 const routes = [
   {
@@ -26,10 +28,20 @@ const routes = [
     name: "Contact",
     component: Contact,
   },
+  // {
+  //   path: "/thanks",
+  //   name: "Thanks",
+  //   component: Thanks,
+  // },
   {
     path: "/thanks",
     name: "Thanks",
-    component: Thanks,
+    component: SubmissionSuccess,
+  },
+  {
+    path: "/404",
+    name: "fail",
+    component: SubmissionFail,
   },
 ];
 
