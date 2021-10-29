@@ -5,17 +5,28 @@
       <input type="hidden" name="form-name" value="ask-question" />
       <div>
         <label>Name</label>
-        <input v-model="name" type="text" name="name" />
+        <input
+          type="text"
+          name="name"
+          @input="(ev) => (form.name = ev.target.value)"
+        />
       </div>
 
       <div>
         <label>Email</label>
-        <input v-model="email" type="text" name="email" />
+        <input
+          type="text"
+          name="email"
+          @input="(ev) => (form.email = ev.target.value)"
+        />
       </div>
 
       <div>
         <label>Message</label>
-        <textarea v-model="message" name="message"></textarea>
+        <textarea
+          name="message"
+          @input="(ev) => (form.message = ev.target.value)"
+        ></textarea>
       </div>
 
       <div>
