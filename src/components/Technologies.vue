@@ -1,6 +1,6 @@
 <template>
   <div id="skills" class="technologiesBox">
-    <h1>What do I use?</h1>
+    <h2>What do I use?</h2>
     <div class="useBox">
       <p class="html">HTML</p>
       <p class="css">CSS</p>

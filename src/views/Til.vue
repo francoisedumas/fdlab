@@ -6,17 +6,19 @@
       <TagCloud :tils="tils" @tag="onTag" />
       <PostList :tils="filterTils" />
     </div>
+    <ButtonToTop />
   </div>
 </template>
 
 <script>
 import PostList from "../components/PostList.vue";
 import TagCloud from "../components/TagCloud.vue";
+import ButtonToTop from "../components/ButtonToTop.vue";
 import { ref, computed } from "vue";
 
 export default {
   name: "Til",
-  components: { PostList, TagCloud },
+  components: { PostList, TagCloud, ButtonToTop },
   setup() {
     const currentTag = ref();
     const tils = ref([
@@ -33,10 +35,39 @@ export default {
         tags: ["Ruby", "Time zone"],
       },
       {
-        title: "each and find_each",
+        title: "Each and find_each",
         description:
           "When you call **#each**, all records will be loaded into memory. When you call **#find_each**, records will be loaded into memory in batches of the given batch size. So when your query returns a number of records that would be too much memory for the server's available resources, then using **#find_each** would be a great choice.",
         tags: ["Ruby", "Active Record"],
+      },
+      {
+        title: "Case statement",
+        description:
+          "In a **case** statement a **,** (coma) is the equivalent of **||** in an if statement.",
+        tags: ["Ruby"],
+      },
+      {
+        title: "find() and find_by()",
+        description:
+          "When no record is found, **find_by()** returns **nil** whereas **find()** returns **ActiveRecord::RecordNotFound** exception.",
+        tags: ["Ruby", "Active Record"],
+      },
+      {
+        title: "link_to_unless_current",
+        description:
+          "**link_to_unless_current** works just link **link_to** except that it doesn’t create a link if the browsers current URL is the same as the link target.",
+        tags: ["Ruby", "Method"],
+      },
+      {
+        title: "presence",
+        description:
+          "To avoid blank string you can add **presence** exp: **state = params[:state] if params[:state].present?**",
+        tags: ["Ruby", "Method"],
+      },
+      {
+        title: "zsh_stats",
+        description: "**zsh_stats** returns the top 20 commands you use",
+        tags: ["ZSH"],
       },
     ]);
 

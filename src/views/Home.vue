@@ -4,12 +4,24 @@
       <img src="../assets/francois.jpg" alt="Ma photo" class="img-circle" />
       <h1>Hello I'm Francois</h1>
     </div>
-    <p>
-      After working for 9 years in the ophtalmic business 🕶 in Asia and Europe,
-      I decided to start a new page in my life to become a developer 💻! To
-      achieve this, I graduated from Le Wagon bootcamp, and here I am! 🚀
-    </p>
-    <Technologies />
+    <div class="vertically-centered">
+      <Technologies />
+      <div>
+        <p>I'm a Ruby on Rails and VueJS developer 💻</p>
+        <p>
+          I have an international background in the ophtalmic business 🕶 in Asia
+          and Europe.
+        </p>
+        <p>I am a freelance web developer, and teacher at Le Wagon 🚃</p>
+        <p>I'm a curious and enthusiast person, always eager to learn 🎓</p>
+        <p>
+          Want to talk about a project,
+          <router-link :to="{ name: 'Contact' }" class="simple-link">
+            contact me 📧
+          </router-link>
+        </p>
+      </div>
+    </div>
     <ButtonToTop />
   </div>
 </template>
@@ -40,5 +52,10 @@ export default {
 .vertically-centered {
   display: flex;
   align-items: center;
+}
+.simple-link {
+  text-decoration: none;
+  background-color: gainsboro;
+  color: #555;
 }
 </style>

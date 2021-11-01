@@ -98,13 +98,4 @@ input {
   font-family: inherit;
   outline: none;
 }
-button {
-  display: block;
-  margin-top: 30px;
-  background: #ff8800;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 18px;
-}
 </style>

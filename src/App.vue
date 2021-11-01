@@ -28,4 +28,15 @@ body {
 p {
   line-height: 2em;
 }
+button {
+  display: block;
+  margin-top: 30px;
+  background: #ff8800;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 3px;
+}
 </style>
