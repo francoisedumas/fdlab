@@ -69,6 +69,12 @@ export default {
         description: "**zsh_stats** returns the top 20 commands you use",
         tags: ["ZSH"],
       },
+      {
+        title: "to float & to integer",
+        description:
+          "**''.to_f** returns **0.0** same as '0'.to_f and **'0'.to_i** return **0**",
+        tags: ["Ruby", "Method"],
+      },
     ]);
 
     const filterTils = computed(() => {
