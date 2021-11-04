@@ -43,25 +43,21 @@
   animation-timing-function: linear;
   animation-direction: alternate;
 }
-.html {
-  background-color: rgb(224, 184, 172);
-}
-.css {
-  background-color: rgb(227, 132, 49);
-  animation-delay: 1s;
-}
+.html,
 .js {
-  background-color: rgb(224, 184, 172);
-}
-.vue {
-  background-color: rgb(227, 132, 49);
+  background-color: var(--beige);
 }
 .ror {
-  background-color: rgb(224, 184, 172);
+  background-color: var(--beige);
   animation-delay: 1s;
 }
+.css {
+  background-color: var(--dark-orange);
+  animation-delay: 1s;
+}
+.vue,
 .sql {
-  background-color: rgb(227, 132, 49);
+  background-color: var(--dark-orange);
 }
 @keyframes animateText {
   from {

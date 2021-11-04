@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="container">
     <h1>Thanks for your message! I'll answer you ASAP!</h1>
     <router-link :to="{ name: 'Home' }">
       <button>Back Home Page</button>
@@ -12,11 +12,3 @@ export default {
   name: "SubmissionFail",
 };
 </script>
-
-<style scoped>
-.home {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px;
-}
-</style>

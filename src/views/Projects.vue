@@ -37,12 +37,12 @@
 import ButtonToTop from "../components/ButtonToTop.vue";
 
 export default {
-  name: "Home",
+  name: "Projects",
   components: { ButtonToTop },
 };
 </script>
 
-<style>
+<style scoped>
 .videosBox {
   display: flex;
   flex-direction: column;

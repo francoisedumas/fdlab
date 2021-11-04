@@ -1,12 +1,12 @@
 <template>
-  <div class="home">
+  <div class="container">
     <div class="vertically-centered">
       <img src="../assets/francois.jpg" alt="Ma photo" class="img-circle" />
       <h1>Hello I'm Francois</h1>
     </div>
     <div class="vertically-centered">
       <Technologies />
-      <div>
+      <div class="overview">
         <p>I'm a Ruby on Rails and VueJS developer 💻</p>
         <p>
           I have an international background in the ophtalmic business 🕶 in Asia
@@ -36,12 +36,7 @@ export default {
 };
 </script>
 
-<style>
-.home {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 10px;
-}
+<style scoped>
 .img-circle {
   height: 80px;
   width: 80px;
@@ -53,9 +48,7 @@ export default {
   display: flex;
   align-items: center;
 }
-.simple-link {
-  text-decoration: none;
-  background-color: gainsboro;
-  color: #555;
+.overview p {
+  line-height: 3em;
 }
 </style>

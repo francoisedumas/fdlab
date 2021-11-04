@@ -1,5 +1,5 @@
 <template>
-  <div class="til-list">
+  <div>
     <div v-for="til in tils" :key="til">
       <div class="til">
         <h3>{{ til.title }}</h3>
@@ -25,11 +25,10 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .til {
   margin: 0 40px 30px;
   padding-bottom: 30px;
-  border-bottom: 1px dashed #e7e7e7;
 }
 .til h3 {
   display: inline-block;
@@ -44,15 +43,13 @@ export default {
   display: block;
   width: 100%;
   height: 100%;
-  background: rgb(227, 132, 49);
+  background: var(--secondary);
   position: absolute;
   z-index: -1;
   padding-right: 40px;
-  /* left: -30px; */
   transform: rotateZ(-1deg);
 }
 .emphasis {
-  padding: 2px;
   font-style: italic;
 }
 </style>

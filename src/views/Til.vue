@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div class="container">
     <h1>Today I learned (TIL)</h1>
-    <button @click="currentTag = ''" class="btnFdl">Clear filter</button>
+    <button @click="currentTag = ''" class="btn-secondary">Clear filter</button>
     <div class="layout">
       <TagCloud :tils="tils" @tag="onTag" />
       <PostList :tils="filterTils" />
@@ -90,12 +90,7 @@ export default {
 };
 </script>
 
-<style>
-.home {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px;
-}
+<style scoped>
 .layout {
   display: grid;
   gap: 20px;
@@ -109,12 +104,5 @@ export default {
   .layout {
     grid-row-gap: 50px;
   }
-}
-.btnFdl {
-  color: white;
-  padding: 3px 10px;
-  margin: 5px;
-  border-radius: 3px;
-  background-color: rgb(227, 132, 49);
 }
 </style>

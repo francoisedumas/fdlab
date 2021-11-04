@@ -18,7 +18,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 footer {
   display: flex;
   justify-content: space-around;
@@ -29,15 +29,13 @@ footer {
   border-top: 1px dashed black;
 }
 footer a {
-  color: #bbb;
-  text-decoration: none;
-  margin-left: 20px;
+  color: black;
   font-size: 30px;
 }
 footer a:hover {
-  color: rgb(46, 46, 46);
+  color: var(--primary);
 }
 .fa-heart {
-  color: #d23333;
+  color: var(--red);
 }
 </style>

@@ -47,6 +47,6 @@ export default {
   font-size: 18px; /* Increase font size */
 }
 .bottom-right:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  background-color: var(--primary);
 }
 </style>

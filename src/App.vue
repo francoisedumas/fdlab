@@ -13,30 +13,4 @@ export default {
 };
 </script>
 
-<style>
-body {
-  background: #f9f6f0;
-}
-#app {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 18px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0 auto;
-  color: #555;
-}
-p {
-  line-height: 2em;
-}
-button {
-  display: block;
-  margin-top: 30px;
-  background: #ff8800;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 18px;
-  text-decoration: none;
-  border-radius: 3px;
-}
-</style>
+<style></style>

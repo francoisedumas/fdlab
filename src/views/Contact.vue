@@ -75,27 +75,10 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .contact {
-  padding: 15px 30px;
-  border-radius: 4px;
-  margin: 50px auto;
   max-width: 600px;
-}
-form {
-  margin: 10px;
-  max-width: 1200px;
-}
-textarea,
-input {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 6px;
+  margin: 20px auto;
   padding: 10px;
-  box-sizing: border-box;
-  border: 0;
-  border-radius: 20px;
-  font-family: inherit;
-  outline: none;
 }
 </style>

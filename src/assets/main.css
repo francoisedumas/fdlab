@@ -1,0 +1,90 @@
+/* custom font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+
+/* variables */
+:root {
+  --primary: #4f515a;
+  --secondary: #ff8800;
+  --dark-orange: #ee8000;
+  --light-gray: #bbb;
+  --beige:rgb(224, 184, 172);
+  --red: #d23333;
+}
+
+/* base styles  */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  color: var(--primary);
+}
+body {
+  background: #f9f6f0;
+}
+#app {
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  color:  var(--primary);
+}
+a {
+  text-decoration: none;
+}
+.simple-link {
+  background-color: gainsboro;
+  color:  var(--primary);
+}
+p {
+  line-height: 2em;
+}
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+/* buttons */
+button {
+  background: var(--secondary);
+  border-radius: 4px;
+  border: none;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin-top: 30px;
+  color: white;
+  font-size: 18px;
+}
+button:hover {
+  background: var(--dark-orange);
+  color: white;
+}
+button:disabled {
+  opacity: 0.5;
+  color: var(--primary);
+  background: var(--secondary);
+  cursor: not-allowed;
+}
+.btn-secondary {
+  color: white;
+  padding: 4px 8px;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+/* forms */
+form {
+  margin: 10px auto;
+  max-width: auto;
+}
+textarea,
+input {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 0;
+  border-radius: 20px;
+}

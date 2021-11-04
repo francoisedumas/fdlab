@@ -22,25 +22,24 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .tag-cloud {
   padding: 10px;
 }
 .tag-cloud h3 {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px dashed var(--light-gray);
   padding: 16px 8px;
-  color: #444;
+  color: var(--primary);
 }
 .tag-cloud div {
   display: inline-block;
   padding: 10px;
 }
 .tag-cloud .uniq-tag {
-  color: #ccc;
-  text-decoration: none;
+  color: var(--light-gray);
 }
 .tag-cloud .uniq-tag:hover {
-  color: #ff8800;
+  color: var(--secondary);
   font-weight: bold;
   cursor: pointer;
 }
