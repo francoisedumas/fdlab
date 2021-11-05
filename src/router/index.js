@@ -13,7 +13,7 @@ const routes = [
     component: Home,
     meta: {
       title: "Welcome to Francois DUMAS LATTAQUE personal website!",
-    }
+    },
   },
   {
     path: "/projects",
@@ -36,7 +36,7 @@ const routes = [
     component: SubmissionSuccess,
     meta: {
       title: "Thanks for your message!",
-    }
+    },
   },
   {
     path: "/404",
