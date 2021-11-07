@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Projects from "../views/Projects.vue";
 import Til from "../views/Til.vue";
-import Contact from "../views/Contact.vue";
+// import Contact from "../views/Contact.vue";
 import SubmissionFail from "../components/SubmissionFail.vue";
 import SubmissionSuccess from "../components/SubmissionSuccess.vue";
 
@@ -28,7 +28,8 @@ const routes = [
   {
     path: "/contact",
     name: "Contact",
-    component: Contact,
+    component: () =>
+      import(/* webpackChunkName: "Contact" */ "../views/Contact"),
   },
   {
     path: "/thanks",
