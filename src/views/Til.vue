@@ -102,7 +102,16 @@ export default {
 }
 @media (max-width: 767px) {
   .layout {
-    grid-row-gap: 50px;
+    grid-row-gap: 20px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+  .btn-secondary {
+    align-content: center;
+    margin: 0 auto;
+    margin-top: 10px;
   }
 }
 </style>

@@ -38,6 +38,11 @@ export default {
   margin-bottom: 10px;
   max-width: 400px;
 }
+@media (max-width: 640px) {
+  .til h3 {
+    max-width: 250px;
+  }
+}
 .til h3::before {
   content: "";
   display: block;

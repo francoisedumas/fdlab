@@ -48,7 +48,6 @@ export default {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  /* max-width: 600px; */
   margin: 0 auto;
 }
 .singleVideo {
@@ -65,6 +64,13 @@ iframe {
   iframe {
     width: 560px;
     height: 315px;
+  }
+}
+@media (max-width: 640px) {
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10px;
   }
 }
 </style>

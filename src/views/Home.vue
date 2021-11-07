@@ -48,6 +48,11 @@ export default {
   display: flex;
   align-items: center;
 }
+@media (max-width: 640px) {
+  .vertically-centered {
+    flex-direction: column;
+  }
+}
 .overview p {
   line-height: 3em;
 }

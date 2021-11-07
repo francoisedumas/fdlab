@@ -13,12 +13,14 @@
   </div>
 </template>
 
-<style>
+<style scoped>
+h2 {
+  margin: 15px auto;
+}
 .technologiesBox {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   max-width: 600px;
   margin: 0 auto;
 }
