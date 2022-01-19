@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  name: "SubmissionFail",
+  name: "SubmissionSuccess",
 };
 </script>

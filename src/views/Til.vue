@@ -41,6 +41,18 @@ export default {
         tags: ["Ruby", "Active Record"],
       },
       {
+        title: "distinct vs uniq",
+        description:
+          "For a query **Tag.joins(:articles).where(articles: articles).distinct** prefer to use **distinct** which is an Active Record method instead of **uniq** which is a Ruby method, your query will start with **SELECT DISTINCT** instead of only **SELECT**",
+        tags: ["Active Record"],
+      },
+      {
+        title: "order vs sort",
+        description:
+          "Following distinct vs uniq TILS, for a query **Tag.joins(:articles).where(articles: articles).distinct.order(:name)** prefer to use **order** which is an Active Record method instead of **sort**, your query will end with **ORDER BY 'tags'.'name' ASC**",
+        tags: ["Active Record"],
+      },
+      {
         title: "Case statement",
         description:
           "In a **case** statement a **,** (coma) is the equivalent of **||** in an if statement.",
