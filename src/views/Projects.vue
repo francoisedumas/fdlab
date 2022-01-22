@@ -23,10 +23,16 @@
     </div>
     <h1>Currently Working With</h1>
     <div class="singleVideo">
-      <iframe src="https://www.kuartz.fr" title="Kartz"></iframe>
+      <iframe src="https://www.beomai.com/" title="Beomai"></iframe>
     </div>
-    <h1>Currently Volunteering For</h1>
+    <h1>Worked for</h1>
     <div class="singleVideo">
+      <iframe src="https://www.bicicouriers.fr/" title="Bicicouriers"></iframe>
+      <iframe
+        src="https://www.atdconseil.fr/"
+        title="Arnaud Taillard Conseil"
+      ></iframe>
+      <iframe src="https://www.kuartz.fr" title="Kartz"></iframe>
       <iframe src="https://www.fiatope.com/" title="Fiatope"></iframe>
     </div>
   </div>
@@ -62,7 +68,7 @@ iframe {
 }
 @media (min-width: 768px) {
   iframe {
-    width: 560px;
+    width: 500px;
     height: 315px;
   }
 }
