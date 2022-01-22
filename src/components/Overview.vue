@@ -11,21 +11,18 @@
       </router-link>
     </p>
     <h2>Testimonials</h2>
-    <img
-      src="../assets/testimonial_arnaud_taillard.png"
-      alt="Testimonial"
-      class="img-testimonial"
-    />
+    <Carousel />
   </div>
 </template>
 
+<script>
+import Carousel from "../components/Carousel.vue";
+
+export default {
+  components: { Carousel },
+};
+</script>
 <style scoped>
-.img-testimonial {
-  height: auto;
-  width: 400px;
-  object-fit: cover;
-  padding: 10px;
-}
 .intro-text {
   padding: 15px;
   text-align: justify;

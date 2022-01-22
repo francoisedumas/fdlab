@@ -103,3 +103,8 @@ input {
   max-width: 500px;
   margin: 0 auto;
 }
+@media (max-width: 640px) {
+  .home-box {
+    max-width: 300px;
+  }
+}
