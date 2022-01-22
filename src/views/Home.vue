@@ -6,21 +6,7 @@
     </div>
     <div class="vertically-centered">
       <Technologies />
-      <div class="overview">
-        <p>I'm a Ruby on Rails and VueJS developer 💻</p>
-        <p>
-          I have an international background in the ophtalmic business 🕶 in Asia
-          and Europe.
-        </p>
-        <p>I am a freelance web developer, and teacher at Le Wagon 🚃</p>
-        <p>I'm a curious and enthusiast person, always eager to learn 🎓</p>
-        <p>
-          Want to talk about a project,
-          <router-link :to="{ name: 'Contact' }" class="simple-link">
-            contact me 📧
-          </router-link>
-        </p>
-      </div>
+      <Overview />
     </div>
     <ButtonToTop />
   </div>
@@ -28,11 +14,12 @@
 
 <script>
 import Technologies from "../components/Technologies.vue";
+import Overview from "../components/Overview.vue";
 import ButtonToTop from "../components/ButtonToTop.vue";
 
 export default {
   name: "Home",
-  components: { Technologies, ButtonToTop },
+  components: { Technologies, ButtonToTop, Overview },
 };
 </script>
 

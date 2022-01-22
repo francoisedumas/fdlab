@@ -1,5 +1,5 @@
 <template>
-  <div id="skills" class="technologiesBox">
+  <div id="skills" class="home-box">
     <h2>What do I use?</h2>
     <div class="useBox">
       <p class="html">HTML</p>
@@ -14,16 +14,6 @@
 </template>
 
 <style scoped>
-h2 {
-  margin: 15px auto;
-}
-.technologiesBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
 .useBox {
   display: flex;
   flex-direction: column;
