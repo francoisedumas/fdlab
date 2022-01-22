@@ -10,3 +10,6 @@ The website is hosted with Netlify and is always up to date thanks to Continuous
 
  # Netlify & Zappier
  The message from the contact form go to your Netlify account. If you want to get it directly to your email you will need Zappier.
+
+ # Carousel
+User [Vue-agile](https://github.com/lukaszflorczak/vue-agile)
