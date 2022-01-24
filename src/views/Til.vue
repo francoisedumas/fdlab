@@ -53,6 +53,12 @@ export default {
         tags: ["Active Record"],
       },
       {
+        title: "with_attached_<attachment>",
+        description:
+          "To avoid N+1 in an index page with articles coming with a photo (model has_one_attached :photo) use **Article.with_attached_photo** instead of Article.all",
+        tags: ["Ruby", "Active Record"],
+      },
+      {
         title: "Case statement",
         description:
           "In a **case** statement a **,** (coma) is the equivalent of **||** in an if statement.",
