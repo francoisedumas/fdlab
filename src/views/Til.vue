@@ -93,6 +93,12 @@ export default {
           "**''.to_f** returns **0.0** same as '0'.to_f and **'0'.to_i** return **0**",
         tags: ["Ruby", "Method"],
       },
+      {
+        title: "extract days, hours, minutes,...",
+        description:
+          "**ActiveSupport::Duration.build(2_000_000.seconds).parts** returns **{:weeks=>3, :days=>2, :hours=>3, :minutes=>33, :seconds=>20}**",
+        tags: ["Ruby", "Method"],
+      },
     ]);
 
     const filterTils = computed(() => {
