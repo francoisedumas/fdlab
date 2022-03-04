@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Projects from "../views/Projects.vue";
 import Til from "../views/Til.vue";
+import Learning from "../views/Learning.vue";
 import Contact from "../views/Contact.vue";
 import SubmissionFail from "../components/SubmissionFail.vue";
 import SubmissionSuccess from "../components/SubmissionSuccess.vue";
@@ -24,6 +25,11 @@ const routes = [
     path: "/til",
     name: "Til",
     component: Til,
+  },
+  {
+    path: "/learning",
+    name: "Learning",
+    component: Learning,
   },
   {
     path: "/contact",
