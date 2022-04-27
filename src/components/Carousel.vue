@@ -10,6 +10,13 @@
   >
     <div class="slide">
       <img
+        src="../assets/testimonial_catherine_deiber.png"
+        alt="Testimonial"
+        class="img-testimonial"
+      />
+    </div>
+    <div class="slide">
+      <img
         src="../assets/testimonial_arnaud_taillard.png"
         alt="Testimonial"
         class="img-testimonial"
